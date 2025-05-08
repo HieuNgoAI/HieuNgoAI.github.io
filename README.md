@@ -59,21 +59,27 @@ Dưới đây là một vài cách phổ biến để khởi động một serve
 
 Sau khi server khởi động, bạn sẽ có thể xem website và tất cả các phần nội dung sẽ được tải chính xác.
 
+Here's the markdown representation of your folder structure:
+
+
 ## Cấu trúc thư mục
-├── index.html # File HTML chính, chứa sidebar và khu vực nội dung chính
-├── style.css # File CSS cho toàn bộ website
-├── script.js # File JavaScript chính để tải nội dung và xử lý tương tác
-├── images/ # Thư mục chứa hình ảnh chung (vd: profile.jpg)
-│ ├── profile.jpg
-│ └── talks/ # (Ví dụ) Thư mục con cho hình ảnh của các buổi nói chuyện
-│ └── talk_placeholder_1.jpg
-└── sections/ # Thư mục chứa các file HTML cho từng phần nội dung
+
+```
+├── index.html               # File HTML chính, chứa sidebar và khu vực nội dung chính
+├── style.css                # File CSS cho toàn bộ website
+├── script.js                # File JavaScript chính để tải nội dung và xử lý tương tác
+├── images/                  # Thư mục chứa hình ảnh chung (vd: profile.jpg)
+│   ├── profile.jpg
+│   └── talks/               # (Ví dụ) Thư mục con cho hình ảnh của các buổi nói chuyện
+│       └── talk\_placeholder\_1.jpg
+└── sections/                # Thư mục chứa các file HTML cho từng phần nội dung
 ├── about.html
 ├── articles.html
 ├── activities.html
 ├── projects.html
 ├── publications.html
 └── talks.html
+```
 
 ## Triển khai (Deployment)
 
