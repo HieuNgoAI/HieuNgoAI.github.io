@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.getElementById('main-content-area');
     const loadingIndicator = document.getElementById('loading-indicator');
     // Ensure this order is the desired display order
-    const sectionsToLoad = ['talks', 'articles', 'projects', 'publications', 'activities', 'about'];
+    const sectionsToLoad = ['talks', 'articles', 'projects', 'publications', 'activities', 'careers', 'about'];
 
     // --- Ensure loading indicator exists and is visible initially ---
     // If it's not in index.html, you could add it here, but better to have it in HTML.
@@ -199,3 +199,32 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 }); // End DOMContentLoaded
+
+// Function to toggle show more/show less for timeline projects
+function toggleProjects(button) {
+    const projectsContainer = button.closest('.timeline-projects');
+    const expandableItems = projectsContainer.querySelectorAll('.expandable-content');
+    const isExpanded = button.textContent.includes('Show Less');
+
+    expandableItems.forEach(item => {
+        if (isExpanded) {
+            item.classList.remove('show');
+            setTimeout(() => {
+                item.style.display = 'none';
+            }, 300);
+        } else {
+            item.style.display = 'list-item';
+            setTimeout(() => {
+                item.classList.add('show');
+            }, 10);
+        }
+    });
+
+    // Update button text
+    if (isExpanded) {
+        const coursesText = projectsContainer.querySelector('h5').textContent.includes('Courses') ? 'Courses' : 'Projects';
+        button.textContent = `Show More ${coursesText}`;
+    } else {
+        button.textContent = 'Show Less';
+    }
+}
